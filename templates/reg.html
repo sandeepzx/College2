@@ -1,0 +1,21 @@
+{% extends "index.html" %}
+{% load static %}
+{% block title %}Register{% endblock title %}
+{% block content %}
+<div class="d-flex justify-content-center mt-5">
+    <div class="col-8 d-flex justify-content-around mt-5">
+        <div class="card col-4">
+            <a href="{% url "tregister" %}">
+                <img class="card-img-top" src="{% static "images/team3.jpg" %}"  alt="Manager">
+            </a>
+            <h5 class=" text-center">Teacher Register</h5>
+        </div>
+        <div class="card col-4" >
+            <a href="{% url "sregister" %}">
+                <img class="card-img-top" src="{% static "images/team4.jpg" %}"  alt="Manager">
+            </a>
+            <h5 class=" text-center">Student Register</h5>
+        </div>
+    </div>
+</div>
+{% endblock content %}

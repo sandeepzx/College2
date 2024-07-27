@@ -1,0 +1,35 @@
+{% extends "index.html" %}
+{% load static %}
+{% block title %}Register{% endblock title %}
+{% block content %}
+<div class="d-flex justify-content-center">
+    <div class="col-6 border border-primary rounded p-4 mt-4">
+        <h1 class="text-center">REGISTER</h1>
+        <form enctype="multipart/form-data" action="{% url "register" %}" method="post">
+            {% csrf_token %}
+            <label for="">First Name</label>
+            <input type="text" class="form-control border-primary mb-2" name="fname">
+            <label for="">Last Name</label>
+            <input type="text" class="form-control border-primary mb-2" name="lname">
+            <label for="">User Name</label>
+            <input type="text" class="form-control border-primary mb-2" name="uname">
+            <label for="">Email</label>
+            <input type="email" class="form-control border-primary mb-2" name="email">
+            <label for="">Age</label>
+            <input type="number" class="form-control border-primary mb-2" name="age">
+            <label for="">Contact Number</label>
+            <input type="text" class="form-control border-primary mb-2" name="number">
+            <label for="">Image</label>
+            <input type="file" class="form-control border-primary mb-2" name="image">
+            <label for="">Password</label>
+            <input type="password" class="form-control border-primary mb-2" name="pass">
+            <label for="">Confirm Password</label>
+            <input type="password" class="form-control border-primary mb-2" name="cpass">
+            <input type="hidden" value="2" class="" name="utype">
+            
+            <input type="submit" class="btn btn-success mt-3" name="" value="Register"> 
+            
+        </form>
+    </div>
+</div>
+{% endblock content %}
